@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello Flask</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='site.css')}}"
+      />
+    <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <img src="{{ url_for('static', filename='/images/v7.png') }}"
+          style="height: 140px; width: 330px;"/>
+      </div>
+      <div class="nav">
+        <ul>
+          <!-- <li><a href="#">Header</a></li> -->
+          <div class ="icon" >
+          <a href=""><i class="fas fa-bell" ></i></a>
+        </div>
+        </ul>
+      </div>
+    </header>
+    <div class="add_video">
+      <h1>Add yours video here</h2>
+      <form action="/action_page.php">
+        <label for="files">Select files:</label>
+        <input type="file" accept=".mp4" id="files" name="files" multiple><br><br>
+      </form>
+    </div>
+    <div>
+      <button>Submit</button>
+    </div>
+    <!-- <h2>Hello World!</h2>
+    <p>This is Flask</p> -->
+  </body>
+</html>
